@@ -1,0 +1,53 @@
+  # 
+  # Spécifique au projet exclut 
+  # 
+  matou 
+  # 
+  # Par défaut exclut 
+  # 
+  # Binaires 
+  * .7z 
+  * .dmg 
+  * .gz 
+  * .iso 
+  *.pot 
+  * .rar 
+  *.le goudron 
+  *.Zip *: français 
+  *.guerre 
+  *.oreille 
+  * .sar 
+  *.classe 
+  # Maven 
+  cible/ 
+  # Fichiers de projet IntelliJ 
+  taches/* .iml 
+  taches/* .iws 
+  taches/* .ipr 
+  taches/idée/ 
+  # fichier de projet eclipse 
+  .paramètres/ 
+  .classpath 
+  .projet 
+  # NetBeans spécifique 
+  nbproject / private / 
+  construire/ 
+  nbbuild / 
+  dist / 
+  nbdist / 
+  nbactions.xml 
+  nb-configuration.xml 
+  # OS 
+  .DS_Store 
+  # Divers 
+  * .swp 
+  release.properties 
+  pom.xml.releaseBackup 
+  pom.xml.tag 
+  taches/target
+
+
+* .iml 
+* .iws 
+* .ipr 
+.idée/ 
