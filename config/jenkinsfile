@@ -1,0 +1,17 @@
+pipeline{
+	node{
+		agent any
+		stages {
+		  stage('install stage'){
+			steps{
+			  	withMaven(maven: 'maven'){
+			  		sh 'mvn clean install'
+
+			  	}
+		  	}
+		  }
+
+		}
+
+	}
+}
