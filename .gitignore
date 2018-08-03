@@ -45,9 +45,13 @@
   pom.xml.releaseBackup 
   pom.xml.tag 
   taches/target
-
-
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+workspace.xml
 * .iml 
 * .iws 
-* .ipr 
-.idée/ 
+* .ipr
+
