@@ -23,7 +23,7 @@ pipeline {
                  bat 'mvn -f taches/pom.xml install'
               },
               c: {
-                 bat 'mvn -f service-eureka>/pom.xml install'
+                 bat 'mvn -f service-eureka/pom.xml install'
               }
             )
           }
