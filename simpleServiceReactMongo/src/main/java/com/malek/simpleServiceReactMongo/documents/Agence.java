@@ -8,18 +8,15 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.io.Serializable;
+import java.util.List;
 
-@Document(collection = "voiture")
+@Document
 @Data
-public class Voiture implements Serializable {
+public class Agence implements Serializable {
     @Id
-    private String id;
-    private String typeVoiture ;
-    private Integer nombreDeSiege ;
-    private Agence agence ;
-
-    private String Description ;
-    private String urlVoiture ;
-
+    private String id ;
+    private String nomAgence ;
+    private Pays pays ;
+    private List<JourOuverture> jourOuvertures ;
 
 }

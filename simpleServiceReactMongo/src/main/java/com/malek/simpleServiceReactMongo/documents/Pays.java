@@ -1,18 +1,23 @@
 package com.malek.simpleServiceReactMongo.documents;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
 
 import java.io.Serializable;
-import java.util.Date;
+import java.util.List;
 
 @Document
-public class Annonce implements Serializable {
+@Data
+public class Pays implements Serializable {
     @Id
     private String id ;
-    private String description ;
-    private Ville ville ;
+    private String NomPays ;
+    private List<Ville> villes ;
+
 
 
 }

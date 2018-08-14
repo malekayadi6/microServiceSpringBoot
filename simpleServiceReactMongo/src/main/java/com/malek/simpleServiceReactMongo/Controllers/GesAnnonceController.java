@@ -24,7 +24,8 @@ public class GesAnnonceController {
 
     @GetMapping("/annonces")
     public Flux<Annonce> getAllAnnoce(){
-        return  annonceService.getAllService();
+
+        return  annonceService.getAllService().log();
 
     }
 
