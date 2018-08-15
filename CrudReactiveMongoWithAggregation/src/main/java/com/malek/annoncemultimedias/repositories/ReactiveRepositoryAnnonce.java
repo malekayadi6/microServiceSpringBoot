@@ -8,6 +8,7 @@ import reactor.core.publisher.Flux;
 public interface ReactiveRepositoryAnnonce extends ReactiveMongoRepository<Annonce,String> {
     @Query("{ 'categorie' : { $regex: ?0 } }")
     public Flux<Annonce> getCategorieByRegex(String regex) ;
-
-
+    public Flux<Annonce> getAnnonceByModel(String model);
+    public Flux<Annonce> getAnnonceByNomLike(String name) ;
+    public Flux<Annonce> getAnnonceByFabricant(String brand) ;
 }

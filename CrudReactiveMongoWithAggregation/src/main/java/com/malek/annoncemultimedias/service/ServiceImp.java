@@ -39,7 +39,8 @@ public class ServiceImp implements IAdminService,IInternauteService,IUserService
                 .doOnSuccess(annonce -> {
                     annonce=annonceU;
                     repositoryAnnonce.save(annonce).subscribe();
-                });
+                })
+          ;//     .doOnError(System.out.println("to do excpetion ")); // todo exception not found
     }
 
     @Override
@@ -63,16 +64,27 @@ public class ServiceImp implements IAdminService,IInternauteService,IUserService
     @Override
     public Flux<Annonce> getAnnoncesByBrand(String fabricantPrefix) {
 
-        return null;
+        return repositoryAnnonce.getAnnonceByFabricant(fabricantPrefix);
+    }
+
+    @Override
+    public Flux<Annonce> getAnnoceByName(String name) {
+        return repositoryAnnonce.getAnnonceByNomLike(name);
+    }
+
+    @Override
+    public Flux<Annonce> getAnnoceByModel(String model) {
+        return repositoryAnnonce.getAnnonceByModel(model);
     }
 
     @Override
     public Mono<Annonce> getAnnonceDetail(String id) {
-        return null;
+        return repositoryAnnonce.findById(id);
     }
 
     @Override
     public Flux<CategoriePrefix> getAllCategoris() {
+
         return null;
     }
 }

@@ -22,6 +22,7 @@ public class UserResource {
     }
     @PutMapping("/update")
     public Mono<Annonce> updateAnnone(@RequestBody Annonce annonce){
+
         return serviceImp.updateAnnoce(annonce) ;
     }
     @DeleteMapping("/delete")

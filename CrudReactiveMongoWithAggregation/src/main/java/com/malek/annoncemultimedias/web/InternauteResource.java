@@ -30,6 +30,23 @@ public class InternauteResource {
 
     }
 
+    @GetMapping("/brand/{brand}")
+    public Flux<Annonce> getAnnonceByBrands(@PathVariable String brand){
+        return serviceImp.getAnnoncesByBrand(brand) ;
+    }
 
+    @GetMapping("/model/{model]")
+    public Flux<Annonce> getAnnoceByModel(@PathVariable String model){
+        return  serviceImp.getAnnoceByModel(model) ;
+    }
 
+    @GetMapping("/model/{name}")
+    public Flux<Annonce> getAnnonceByNom(@PathVariable String name){
+        return serviceImp.getAnnoceByName(name);
+    }
+
+   /* @GetMapping("/model/rech")
+    public Flux<Annonce> rechByMotsces(@PathVariable String motsCle){
+
+    }*/
 }

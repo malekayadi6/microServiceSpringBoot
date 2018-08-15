@@ -11,8 +11,9 @@ public interface IInternauteService  {
     public Flux<Annonce> getAllAnnonce() ;
     public Flux<Annonce> getAnnoncesByCategorie(String catPrefix) ;
     public Flux<Annonce> getAnnoncesByBrand(String fabricantPrefix) ;
+    public Flux<Annonce> getAnnoceByName(String name) ;
+    public Flux<Annonce> getAnnoceByModel(String model) ;
     public Mono<Annonce> getAnnonceDetail(String id) ;
-
     public Flux<CategoriePrefix> getAllCategoris() ;
 
 
